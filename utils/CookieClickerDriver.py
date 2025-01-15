@@ -1,4 +1,5 @@
 from ..config.locators import LOCATORS
+from .BaseWebDriver import WebDriver
 
 class CookieClickerDriver(WebDriver):
 
