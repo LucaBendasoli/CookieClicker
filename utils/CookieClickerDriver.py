@@ -8,7 +8,13 @@ class CookieClickerDriver(WebDriver):
         self.url = 'https://orteil.dashnet.org/cookieclicker/'
 
     def select_language(self) -> None:
+        
+        """Selects the language in the game"""
+        
         self.click_webelement(LOCATORS['select_portuguese'])
 
     def click_big_cookie(self) -> None:
+        
+        """Clicks the big cookie in the game"""
+        
         self.click_webelement(LOCATORS['big_cookie'])
