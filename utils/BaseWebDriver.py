@@ -24,3 +24,8 @@ class WebDriver:
         
         WebDriverWait(self._driver, timeout).until(condition(locator)).click()
         
+    def find_webelement(self, locator: str, timeout: int = 10, condition = EC.presence_of_element_located) -> WebElement|list[WebElement]:
+        
+        """Looks for a (or many) web element in the page and returns it if found"""
+        
+        return WebDriverWait(self._driver, timeout).until(condition(locator))
