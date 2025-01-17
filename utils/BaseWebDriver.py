@@ -28,4 +28,7 @@ class WebDriver:
         
         """Looks for a (or many) web element in the page and returns it if found"""
         
+        if timeout == 0:
+            return self._driver.find_element(*locator)
+        
         return WebDriverWait(self._driver, timeout).until(condition(locator))
