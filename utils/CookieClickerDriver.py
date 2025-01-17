@@ -24,8 +24,6 @@ class CookieClickerDriver(WebDriver):
     
         """Looks for buildings to buy in the game"""
     
-        cookie_balance = self.find_webelement(LOCATORS['cookie_balance'], 0.5).text
-        cookie_balance = int(cookie_balance.split()[0].replace(',', ''))
         try:
             buildings = self.find_webelement(LOCATORS['buildings'], 0)
         except:
