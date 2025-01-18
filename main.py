@@ -12,4 +12,5 @@ cookieDriver.select_language()
 
 while True:
     cookieDriver.click_big_cookie()
+    cookieDriver.look_for_upgrades_to_buy()
     cookieDriver.look_for_buildings_to_buy()

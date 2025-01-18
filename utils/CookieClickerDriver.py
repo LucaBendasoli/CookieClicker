@@ -32,3 +32,16 @@ class CookieClickerDriver(WebDriver):
             buildings.click()
             return
         buildings[0].click()
+        
+    def look_for_upgrades_to_buy(self) -> None:
+        
+        """Looks for upgrades to buy in the game"""
+        
+        try:
+            upgrade = self.find_webelement(LOCATORS['upgrade'], 0)
+        except:
+            return
+        if not isinstance(upgrade, Iterable):
+            upgrade.click()
+            return
+        upgrade[0].click()
