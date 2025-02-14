@@ -36,3 +36,11 @@ Even though it's simple, I used this opportunity to re-build my first automation
     ```
 
 2. The script will open the Cookie Clicker game, select the language, and start clicking the big cookie, looking for upgrades and buildings to buy as soon as they are available.
+
+## Contribution
+
+1. Fork the project.
+2. Create a new branch: `git checkout -b my-new-feature`
+3. Make your changes and commit: `git commit -m 'Add new functionality'`
+4. Push to the remote repository: `git push origin my-new-feature`
+5. Open a pull request.
