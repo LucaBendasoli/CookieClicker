@@ -28,6 +28,10 @@ Even though it's simple, I used this opportunity to re-build my first automation
     pip install -r requirements.txt
     ```
 
+## Features
+
+- Start a Cookie Clicker run
+
 ## Usage
 
 1. Run the main.py script:
