@@ -1,7 +1,5 @@
 """
-    For now this file is only here for testing and will be modified throughout the project.
-    When everything is ready, this file will load the main execution logic of the project,
-    instance of the created classes and the call of their functions
+    Main file that orchestrates the whole process of playing the Cookie Clicker game.
 """
 
 from utils.CookieClickerDriver import CookieClickerDriver
