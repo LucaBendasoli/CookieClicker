@@ -1,6 +1,7 @@
 # Cookie Clicker Automation
 
 This project automates the process of playing the Cookie Clicker game using Selenium WebDriver.
+Even though it's simple, I used this opportunity to re-build my first automation project but this time using object-oriented programming, abstracting Selenium functions into classes.
 
 ## Project Structure
 
