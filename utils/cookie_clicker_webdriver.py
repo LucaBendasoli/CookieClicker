@@ -1,6 +1,7 @@
 """Module that contains the webdriver class for Cookie Clicker game."""
 
 from typing import Iterable
+from selenium.common.exceptions import NoSuchElementException, TimeoutException
 from .locators import LOCATORS
 from .base_webdriver import WebDriver
 
@@ -22,7 +23,7 @@ class CookieClickerDriver(WebDriver):
         ...funny isn't it? (〜￣▽￣)〜"""
         try:
             self.click_webelement(LOCATORS['accept_cookies'])
-        except Exception as e:
+        except (NoSuchElementException, TimeoutException):
             pass
 
     def click_big_cookie(self) -> None:
@@ -33,7 +34,7 @@ class CookieClickerDriver(WebDriver):
         """Looks for buildings to buy in the game"""
         try:
             buildings = self.find_webelement(LOCATORS['buildings'], 0)
-        except:
+        except (NoSuchElementException, TimeoutException):
             return
         if not isinstance(buildings, Iterable):
             buildings.click()
@@ -44,7 +45,7 @@ class CookieClickerDriver(WebDriver):
         """Looks for upgrades to buy in the game"""
         try:
             upgrade = self.find_webelement(LOCATORS['upgrade'], 0)
-        except:
+        except (NoSuchElementException, TimeoutException):
             return
         if not isinstance(upgrade, Iterable):
             upgrade.click()
