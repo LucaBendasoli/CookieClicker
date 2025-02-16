@@ -1,6 +1,6 @@
 from typing import Iterable
 from .locators import LOCATORS
-from .BaseWebDriver import WebDriver
+from .base_webdriver import WebDriver
 
 class CookieClickerDriver(WebDriver):
 
@@ -9,21 +9,21 @@ class CookieClickerDriver(WebDriver):
         self.url = 'https://orteil.dashnet.org/cookieclicker/'
 
     def select_language(self) -> None:
-        
+
         """Selects the language in the game"""
-        
+
         self.click_webelement(LOCATORS['select_portuguese'])
 
     def click_big_cookie(self) -> None:
-        
+
         """Clicks the big cookie in the game"""
-        
+
         self.click_webelement(LOCATORS['big_cookie'])
-        
+
     def look_for_buildings_to_buy(self) -> None:
-    
+
         """Looks for buildings to buy in the game"""
-    
+
         try:
             buildings = self.find_webelement(LOCATORS['buildings'], 0)
         except:
@@ -32,11 +32,11 @@ class CookieClickerDriver(WebDriver):
             buildings.click()
             return
         buildings[0].click()
-        
+
     def look_for_upgrades_to_buy(self) -> None:
-        
+
         """Looks for upgrades to buy in the game"""
-        
+
         try:
             upgrade = self.find_webelement(LOCATORS['upgrade'], 0)
         except:

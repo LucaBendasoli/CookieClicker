@@ -2,7 +2,7 @@
     Main file that orchestrates the whole process of playing Cookie Clicker.
 """
 
-from utils.CookieClickerDriver import CookieClickerDriver
+from utils.cookie_clicker_webdriver import CookieClickerDriver
 
 def start_cookie_clicker() -> CookieClickerDriver:
     """Starts the Cookie Clicker game, selects portuguese as
