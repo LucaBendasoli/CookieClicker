@@ -24,8 +24,15 @@ class WebDriver:
         timeout:int = 10,
         condition = EC.element_to_be_clickable
     ) -> None:
-        """Wait for a web element to be clickable and clicks it.
-        If not found, raises an exception."""
+        """Wait a specific time (timeout parameter) for a web element
+        to be clickable and clicks it. If no elements are found, it
+        raises an exception.
+
+        Args:
+            locator (str): The locator of the element to be clicked.
+            timeout (int): The time in seconds to wait for the element to be clickable.
+            condition (function): The expected condition choosed for the WebDriverWait function
+        """
         WebDriverWait(self._driver, timeout).until(condition(locator)).click()
 
     def find_webelement(self,
@@ -33,8 +40,14 @@ class WebDriver:
         timeout: int = 10,
         condition = EC.presence_of_element_located
     ) -> WebElement|list[WebElement]:
-        """Wait for a (or many) web element in the page to be located and
-        returns it (or them) if found. If not found, raises an exception."""
+        """Wait a specific time (timeout parameter) for a web element
+        in the page to be located and returns it if found.
+        If no elements are found, an exception is raised.
+
+        Args:
+            locator (str): The locator of the element to be found.
+            timeout (int): The time in seconds to wait for the element to be found.
+            condition (function): The expected condition choosed for the WebDriverWait function."""
         if timeout == 0:
             return self._driver.find_element(*locator)
         return WebDriverWait(self._driver, timeout).until(condition(locator))
