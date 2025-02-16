@@ -14,6 +14,14 @@ class CookieClickerDriver(WebDriver):
 
         self.click_webelement(LOCATORS['select_portuguese'])
 
+    def accept_cookies(self) -> None:
+        """Accepts all cookies from Cookie Clicker's website.\n
+        ...funny isn't it? (〜￣▽￣)〜"""
+        try:
+            self.click_webelement(LOCATORS['accept_cookies'])
+        except Exception as e:
+            pass
+
     def click_big_cookie(self) -> None:
 
         """Clicks the big cookie in the game"""

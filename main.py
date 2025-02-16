@@ -10,6 +10,7 @@ def start_cookie_clicker() -> CookieClickerDriver:
     cookie_driver = CookieClickerDriver()
     cookie_driver.open_url()
     cookie_driver.select_language()
+    cookie_driver.accept_cookies()
     return cookie_driver
 
 def click_and_buy_forever(cookie_driver: CookieClickerDriver) -> None:
