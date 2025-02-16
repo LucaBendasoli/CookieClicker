@@ -1,6 +1,8 @@
 """THE CLASS IN THIS MODULE SOULDN'T BE INSTANTIATED DIRECTLY, INSTEAD,
 IT SHOULD BE INHERITED BY A CLASS THAT IMPLEMENTS THE URL ATTRIBUTE."""
 
+#TODO: Implement abstract class functionality to avoid instantiation of this class.
+
 from selenium import webdriver
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
